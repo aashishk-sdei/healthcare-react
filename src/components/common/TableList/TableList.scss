@@ -1,0 +1,117 @@
+.tableWrapper{
+    .tblListHeader {
+        @media(max-width:550px){
+            flex-direction: column;
+            align-items: stretch !important;
+        }
+        .tblListHeader-col {
+            @media(max-width:550px){
+                padding-right: 0 !important;
+                padding-bottom: 10px;
+            }
+        }
+        
+        .listHeaderBtnWrapper{   
+            margin-left: 6px;
+            @media(max-width:550px){
+                margin-bottom: 6px;
+                margin-left: 0;
+            }    
+            .listHeaderBtn {
+                @media(max-width:550px){
+                    width:100%;
+                }
+            }
+        }
+    }
+   .table td,.table th {
+        white-space: nowrap;
+        vertical-align: middle;
+       
+    }
+    .table th {
+        button {
+            font-weight: 700;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .table td {
+        .custom-control{
+            margin-bottom: 0;
+        }
+    }
+    td,th {
+        img {
+            width:40px;
+            height:40px;
+        }
+    }
+    .listSwitch-cell {
+        cursor: default;
+        &:focus{
+            outline: none;
+        }
+    }
+    .listSwitch-cell.custom-switch .custom-control-label::before {
+        left:0;
+    }
+    .listSwitch-cell.custom-switch .custom-control-label::after {
+        left:3px;
+    }
+    .listACtionBtn,
+    .btn.listACtionBtn 
+    {
+        padding:5px;
+        font-size: 18px;
+        vertical-align: unset;
+        i {
+            padding:0;
+        }
+    }
+    .tableFooter {
+        border-top: 1px solid #dee2e6;
+        .tableFooterCol {
+            margin-right: 20px;
+            .searchFilter-action {
+                margin-left: 0;
+            }
+        }
+        .pagination {
+            margin-left: auto;
+            margin-bottom: 0;
+            overflow: auto;
+            white-space: nowrap;
+            @media(max-width:620px){
+                margin-left: 0 !important;
+            }
+            .page-item {
+                .page-link {
+                    padding: 10px 15px;
+                    border: 1px solid #eee;
+                    border-right: none                   
+                }
+                &:last-child {
+                    .page-link {
+                       border-right: 1px solid #eee; 
+                    }
+                }
+            }    
+                    
+        }
+    }
+}
+.content-page-note {
+    @media(max-width:550px){
+        max-width: 100% !important;
+    }
+    .note-label{
+        margin-right: -30px;
+        padding-left: 0;
+    }
+    .note-content{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

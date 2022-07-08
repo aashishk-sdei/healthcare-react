@@ -1,0 +1,19 @@
+.card.addSectionWrapper {
+  border: 1px solid #eee;
+
+  .card-header {
+    background: #fafafa;
+    &:first-child {
+      padding: 6px 16px;
+    }
+  }
+
+  .addSection-rw {
+    margin-bottom: 20px;
+  }
+}
+.dragDropBlockRw {
+  @media (max-width: 960px) {
+    flex-direction: column !important;
+  }
+}

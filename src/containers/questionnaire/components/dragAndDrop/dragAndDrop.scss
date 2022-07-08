@@ -1,0 +1,115 @@
+.dragListItemBlc {
+    @media(max-width:767px) {
+        max-height: 250px;
+    }
+
+    .dragListItemWrapper {
+        border-bottom: 1px solid #eee;
+
+        .dragListItem {
+            padding: 9px 15px;
+            margin: 0 0 1px 0;
+            cursor: pointer;
+            min-height: 44px;
+
+            * {
+                cursor: pointer;
+            }
+
+            @media(max-width:767px) {
+                padding: 7px 15px;
+            }
+
+            label {
+                font-size: 17px;
+                font-weight: 600;
+                color: #fff;
+                margin-right: 20px;
+            }
+
+            >span {
+                font-size: 26px;
+                color: #fff;
+                margin: 0;
+                transform: rotate(0deg);
+                transition: all ease 0.3s 0s;
+            }
+
+            >span.active {
+                transform: rotate(90deg);
+            }
+        }
+
+        .answerBlc {
+            padding: 0 0 0 10px;
+            .answerBlc {
+                .answerBlc {
+                    padding: 0;
+                    li {
+                        padding-left:25px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+
+        .noQuestionData {
+            font-size: 20px;
+            font-weight: 400;
+            height: 228px;
+        }
+
+        .dragListItemWrapper {
+            // background: #aaa !important;
+            .dragListItemWrapper {
+                background: #fff !important;
+                .dragListItem{
+                    label {
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #333;
+                    }
+                    > span {
+                        font-size:15px;
+                        color: #5a6169;
+                    }
+                    
+                    .flipIconDown {
+                        transform: rotate(90deg);
+                    }
+                    .flipIconLeft {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+
+        .answerBlcList {
+            ul {
+                background-color: #fff;
+
+                li {
+                    padding: 8px 10px;
+                    border-bottom: 1px solid #eee;
+                    cursor: default;
+                    label {
+                        margin-right: 15px;
+                        font-size: 15px;
+                    }
+                    span {
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.noQuestionData {
+    min-height: 150px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 9px 5px;
+    background-color: #eee;
+}
+

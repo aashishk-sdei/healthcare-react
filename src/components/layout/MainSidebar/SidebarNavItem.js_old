@@ -1,0 +1,162 @@
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink as RouteNavLink } from "react-router-dom";
+import { NavItem, NavLink, Collapse } from "shards-react";
+import { GroupAdminRoutes } from '../../../utils/constants';
+// import LocationRoutes from './locationRoutes';
+// import QuestionnaireRoutes from './questionnaireRoutes';
+// import ICDRoutes from './icdRoutes';
+// import ProgramRoutes from './programRoutes';
+// import EmailRoutes from './emailRoutes';
+// import KnowledgeBankRoutes from './knowledgeBankRoutes';
+import MasterRoutes from './masterRoutes';
+import EnrollmentRoutes from './enrollmentRoutes';
+import CarePathwayRoutes from './carePathwayRoutes';
+import ContentRoutes from './contentRoutes';
+import DevelopersOnlyRoutes from './developersOnlyRoutes';
+import { set_active_nev } from '../../../context/actions/client'
+
+const SidebarNavItem = ({ item, isMainMenuActive, activeMenu, onActiveMainMenu }) => {
+  const dispatch = useDispatch();
+  let { group, user } = useSelector(state => state);
+  let activeNav = useSelector(state => state.client.isActive);
+  const [collapse, setCollapse] = useState(activeNav);
+  const toggle = (val) => {
+    // setCollapse(val);
+    setCollapse(collapse ? '' : val);
+    dispatch(set_active_nev(val, result => {
+      setCollapse(result);
+    }));
+  }
+
+  const isRouteChild = (item.title === 'Masters' || item.title === 'Enrollments' || item.title === 'Care Pathway' || item.title === 'Content' || item.title === 'Developers Only');
+  const DisabledRoute = item.title === 'Masters' || item.title === 'Enrollments' || item.title === 'Care Pathway' || item.title === 'Content' || item.title === 'Developers Only';
+
+  return (
+    <>
+      {user.role === 3 ? (group.details.modules && group.details.modules.length && group.details.modules.findIndex(val => item.title === GroupAdminRoutes[val.moduleID]) > -1 || item.title === 'Dashboard') ?
+        <NavItem className={isRouteChild ? 'noRouterItem' : ''}>
+          <NavLink tag={RouteNavLink} to={isRouteChild ? {} : item.to} className={isRouteChild ? activeMenu === item.title ? 'collapseBtnActive custom-main-menu' : 'collapseBtn custom-main-menu' : ' custom-main-menu'} onClick={() => {
+            let isActive = activeMenu !== item.title ? true : !isMainMenuActive
+            onActiveMainMenu(isActive, item.title);
+            toggle(isRouteChild ? item.title : '');
+          }} title={DisabledRoute || isRouteChild ? "Coming soon" : item.title}>
+            {item.htmlBefore && (
+              <div
+                className="d-inline-block item-icon-wrapper"
+                dangerouslySetInnerHTML={{ __html: item.htmlBefore }}
+              />
+            )}
+            {item.title && <span>{item.title}</span>}
+            {item.htmlAfter && (
+              <div
+                className="d-inline-block item-icon-wrapper"
+                dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
+              />
+            )}
+          </NavLink>
+
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Masters' ? <MasterRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Enrollments' ? <EnrollmentRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Care Pathway' ? <CarePathwayRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Content' ? <ContentRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Developers Only' ? <DevelopersOnlyRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+
+          {/* <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Location' ? <LocationRoutes /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Questionnaire' ? <QuestionnaireRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'ICD' ? <ICDRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Education Program' ? <ProgramRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'CMS' ? <EmailRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Knowledge Bank' ? <KnowledgeBankRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse> */}
+        </NavItem> : '' :
+        <NavItem className={isRouteChild ? 'noRouterItem' : ''}>
+          <NavLink tag={RouteNavLink} to={isRouteChild ? {} : item.to} className={isRouteChild ? activeMenu === item.title ? 'collapseBtnActive custom-main-menu' : 'collapseBtn custom-main-menu' : ' custom-main-menu'} onClick={() => {
+            let isActive = activeMenu !== item.title ? true : !isMainMenuActive
+            onActiveMainMenu(isActive, item.title);
+            toggle(isRouteChild ? item.title : '');
+          }} title={DisabledRoute || isRouteChild ? "Coming soon" : item.title}>
+            {item.htmlBefore && (
+              <div
+                className="d-inline-block item-icon-wrapper"
+                dangerouslySetInnerHTML={{ __html: item.htmlBefore }}
+              />
+            )}
+            {item.title && <span>{item.title}</span>}
+            {item.htmlAfter && (
+              <div
+                className="d-inline-block item-icon-wrapper"
+                dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
+              />
+            )}
+          </NavLink>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Masters' ? <MasterRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Enrollments' ? <EnrollmentRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Care Pathway' ? <CarePathwayRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Content' ? <ContentRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={(activeMenu === item.title && isMainMenuActive) ? true : false} className="navSubList">
+            {item.title === 'Developers Only' ? <DevelopersOnlyRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+
+          {/* <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Location' ? <LocationRoutes /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Questionnaire' ? <QuestionnaireRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'ICD' ? <ICDRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Education Program' ? <ProgramRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'Knowledge Bank' ? <KnowledgeBankRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse>
+          <Collapse open={collapse === item.title ? true : false} className="navSubList">
+            {item.title === 'CMS' ? <EmailRoutes _toggle={(val) => toggle(val)} /> : ''}
+          </Collapse> */}
+        </NavItem>
+      }
+    </>
+  );
+}
+
+SidebarNavItem.propTypes = {
+  /**
+   * The item object.
+   */
+  item: PropTypes.object
+};
+
+export default SidebarNavItem;

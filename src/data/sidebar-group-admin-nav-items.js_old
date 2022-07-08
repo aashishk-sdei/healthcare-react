@@ -1,0 +1,141 @@
+export default () => {
+  return [
+    {
+      title: "Dashboard",
+      to: "/dashboard",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      htmlAfter: ""
+    },
+    {
+      title: "Manage Client",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/client-list",
+    },
+    {
+      title: "Manage User Type",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/user-type-list"
+    },
+    {
+      title: "Manage Group Types",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/group-type-list"
+    },
+    {
+      title: "Manage Staff",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/staff-list"
+    },
+    {
+      title: "ICD",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/icd-categories"
+    },
+    {
+      title: "Manage View",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/view"
+    },
+    {
+      title: "Survey Category",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/survey-category-list"
+    },
+    {
+      title: "Questionnaire",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/question-categories"
+    },
+    {
+      title: "Manage Diseases",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/manage-diseases-list"
+    },
+    {
+      title: "Education Program",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/program-type-list"
+    },
+    {
+      title: "Diagnosis",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/diagnosis-list"
+    },
+    {
+      title: "Care Pathway",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/care-path-list"
+    },
+    {
+      title: "Manage Language",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/language-list"
+    },
+    {
+      title: "Manage Label",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/label-list"
+    },
+    // {
+    //   title: "Manage Problem",
+    //   htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+    //   // to: "/cms",
+    //   to: "/problem-list"
+    // },
+    {
+      title: "Knowledge Bank",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/knowledge"
+    },
+    {
+      title: "Algorithm Creater",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/user-profile-lite",
+      to: "/coming-soon3"
+    },
+    {
+      title: "Event Engine",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/event-engine",
+      to: "/coming-soon4"
+    },
+    {
+      title: "Engagement Tools",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/engagement-tools",
+      to: "/coming-soon5"
+    },
+    {
+      title: "Locations",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/locations",
+      to: "/coming-soon6"
+    },
+    {
+      title: "CMS",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/email-type-list"
+    },
+    {
+      title: "Diagnosis",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      to: "/diagnosis-list"
+    },
+    {
+      title: "Communication",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/communication"
+    },
+    {
+      title: "TableComponent",
+      htmlBefore: '<i class="material-icons">keyboard_arrow_right</i>',
+      // to: "/cms",
+      to: "/TableComponent"
+    }
+  ]
+}

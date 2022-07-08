@@ -1,0 +1,36 @@
+.PhoneInput {
+  border: 1px solid #e1e5eb;
+  padding: 8px .75rem;
+  border-radius: .25rem;
+
+  .PhoneInputInput {
+    border: none;
+    font-size: .8125rem;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.PhoneInput.active {
+  border-color: #007bff;
+  box-shadow: 0 0.313rem 0.719rem rgba(0, 123, 255, .1), 0 0.156rem 0.125rem rgba(0, 0, 0, .06);
+}
+
+.PhoneInput.PhoneInputError {
+  border-color: #c4183c;
+  box-shadow: 0 5px 11.5px rgba(196, 24, 60, .1);
+}
+.phoneInputRequired{
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #c4183c;
+}
+.PhoneInput.PhoneInputDisable {
+  background-color: #f5f6f7;
+
+  input:disabled {
+    background-color: transparent;
+  }
+}

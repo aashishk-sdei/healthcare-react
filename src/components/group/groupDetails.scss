@@ -1,0 +1,24 @@
+.btn.uploadBtn {
+    font-size: 14px;
+    border-color: #e9ecef;
+    padding:7px 10px;
+    &:hover,
+    &:focus
+    {
+        background-color: transparent;
+        border-color: #e9ecef;
+        color:#007bff;
+    }    
+    input {
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        opacity: 0;
+        text-indent: -999999px;
+        cursor: pointer;
+    }
+}
+.uploadBtn.btn-outline-light:not(:disabled):not(.disabled):active:focus {
+    color:#007bff;
+}

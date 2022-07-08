@@ -1,0 +1,11 @@
+.locationCol {
+    @media(max-width: 990px) {
+        order: 1;
+    }
+    .form-group:nth-last-of-type(1){
+        margin-bottom: 0;
+    }
+    .form-group:nth-last-of-type(2){
+        margin-bottom: 0;
+    }
+}

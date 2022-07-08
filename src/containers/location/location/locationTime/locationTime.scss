@@ -1,0 +1,23 @@
+div.locationTimeCol {
+    @media(max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    margin-bottom:10px;
+
+    .locationTimeLabel {
+        width: 135px;
+        margin-right: 15px;
+    }
+
+    .weekTimeCol {
+        margin-bottom: .5rem;
+    }
+}
+.locationTimeCol.customTimeRw {
+    @media(max-width: 600px) {
+        flex-direction: row;
+        align-items: flex-start !important;
+    }
+}

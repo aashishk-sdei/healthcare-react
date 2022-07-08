@@ -1,0 +1,40 @@
+.tblTtitle {
+  margin-bottom: 5px;
+}
+
+.lessionTable {
+  .card-header.tblListHeader {
+    &:first-child {
+      padding: 0px 0.75rem;
+    }
+
+    .btn.searchFilter-action {
+      margin: 10px 10px 10px 0;
+    }
+  }
+  .table-responsive {
+    border-top: none;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .table-responsive.filterBtnActive {
+    border-radius: 0;
+  }
+  .tableFooter {
+    border-top: none !important;
+    background: #fbfbfb;
+    border: 1px solid #dee2e6;
+  }
+
+  .questionnaireCount {
+    top: -7px;
+    right: -20px;
+    height: 20px;
+    font-size: 10px;
+    padding: 7px;
+  }
+  .cardBodyLesson {
+    border: 1px solid #dee2e6;
+  }
+}

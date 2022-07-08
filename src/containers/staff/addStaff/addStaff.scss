@@ -1,0 +1,115 @@
+.staffPermissionRw {
+    border: 1px solid #eee;
+    margin: 7px 0 0;
+    max-height: 230px;
+    width: 100%;
+
+    @media(max-width: 1023px) {
+        max-width: none;
+    }
+
+    .permissionList {
+        padding: 10px;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        .permissionCheck-item.item2 {
+            margin: 0 10px 0 0;
+            max-width: 170px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .custom-control {
+            padding-left: 23px;
+            margin-bottom: 0;
+
+            .custom-control-description {
+                display: none;
+            }
+        }
+
+        .permissionCheck-blc {
+            padding-right: 10px;
+            .permissionCheck-item {
+                margin: 0 0 0 12px;
+                font-size: 11px;
+                text-transform: uppercase;
+
+                span {
+                    margin: 5px 0 0;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .permisstionLbl {
+        margin-right: 10px;
+    }
+
+    .checkBox-list {
+        padding: 5px 10px 5px;
+
+        &:hover {
+            background: #f3f3f3;
+        }
+    }
+}
+
+.staffPermissionRw.assign {
+    padding: 10px;
+
+    .assignCheck-blc {
+        width: 33.3%;
+        padding: 0 15px 0 0;
+
+        @media(max-width: 550px) {
+            width: 50%;
+        }
+        @media(max-width: 480px) {
+            width: 100%;
+        }
+
+        .permissionCheck-item {
+            @media(max-width: 480px) {
+                margin: 4px 0;
+            }
+            .custom-control {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.staffPermissionRw.assign.temp {
+    padding: 10px;
+
+    .assignCheck-blc {
+        width: 33.3%;
+        padding: 0 15px 0 0;
+
+        @media(max-width: 550px) {
+            width: 50%;
+        }
+        @media(max-width: 480px) {
+            width: 100%;
+        }
+
+        .permissionCheck-item {
+            margin-bottom: 0;
+            @media(max-width: 480px) {
+                margin: 4px 0;
+            }
+            .custom-control {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.listSearchCell {
+    max-width: 230px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media(max-width:600px){
+        max-width: none;
+        width: auto;
+    }
+
+    i{
+        font-size: 20px;
+    }
+
+    input {
+        padding-right: 36px;
+        padding-left: 12px;
+        border-radius: 25px;
+    }
+    .clearSearchBtn{
+        width:40px;
+        top:0;
+        right:0;
+        bottom: 0;
+        font-size: 17px !important;
+        border-radius: 0 25px 25px 0;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}

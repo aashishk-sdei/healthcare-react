@@ -1,0 +1,17 @@
+.withInput {
+  margin: 7px 0 0;
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+}
+.custom-toggle .custom-control-input.is-invalid ~ .custom-control-label::after {
+  background-color: #adb5bd !important;
+}
+
+.custom-control-input.is-invalid ~ .custom-control-label::before {
+  border-color: #adb5bd !important;
+}
+
+.custom-toggle .custom-control-input:checked ~ .custom-control-label::after {
+  background: #fff !important;
+}

@@ -1,0 +1,44 @@
+.modalModuleList {
+    .DetailsModal {
+        >h3 {
+            margin: 8px 16px;
+        }
+
+        .modalDetailInner {
+            font-size: 16px;
+            max-height: 405px;
+            padding: 0 16px;
+
+            >ul {
+                margin-right: -5px;
+                margin-left: -10px;
+            }
+
+            li {
+                margin: 0;
+                padding: 5px 5px 5px 10px;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background: #f9f9f9;
+                    border-radius: 5px;
+                }
+                > span {
+                    margin-top: 2px;
+                }
+                .btn {
+                    font-size: 13px;
+                    font-weight: 600;
+                    min-width: 85px;
+                    padding: 4px 10px;
+
+                    i {
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

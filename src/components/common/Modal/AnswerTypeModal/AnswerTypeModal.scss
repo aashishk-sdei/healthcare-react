@@ -1,0 +1,31 @@
+
+.modal-dialog.answerTypeModal {
+    max-width: 700px;
+    .modal-body{
+        max-height: 400px;
+    }
+    .answerTypeBlc {
+        li {
+            margin-bottom: 5px;
+            .answerTypeInput{
+                margin-right: 6px;
+            }
+                .form-control {
+                    font-size: 15px;
+                    &:disabled {
+                        background-color: #fbfbfb;
+                        border: 1px solid #e8e8e8;
+                    }
+                }
+           
+            .btn {
+                height: 40px;
+                width:40px;
+                margin-left: 4px;
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

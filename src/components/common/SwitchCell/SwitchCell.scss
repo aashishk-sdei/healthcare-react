@@ -1,0 +1,26 @@
+.switchCell.custom-control {
+    padding-left: 52px;
+
+    .custom-control-label {
+        position: absolute;
+
+        &::before {
+            top:0;
+            left: -52px;
+            width: 45px;
+            height: 22px;
+            border-radius: 30px;
+        }
+
+        &::after {
+            top:2px;
+            left: -49px;
+            width:18px;
+            height:18px;
+            border-radius: 50%;
+        }
+    }
+}
+.switchCell.custom-switch .custom-control-input:checked~.custom-control-label::after {
+    transform: translateX(22px);
+}

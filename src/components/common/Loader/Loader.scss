@@ -1,0 +1,30 @@
+.loaderWrapper,
+.loaderOverlay
+{
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+.loaderWrapper{
+.loaderOverlay {
+    background-color: rgba(162, 172, 194, 0.15);
+}
+.loaderOverlay.rounded-10 {
+    border-radius: 10px;
+}
+.spinner-border {
+    z-index: 9;
+}
+.spinner-border.lg {
+    width: 3rem;
+    height: 3rem;
+}
+}
+.loaderWrapper.innerPage {
+height: calc(100vh - 60px)
+}
+.loaderWrapper.FullWindow {
+    position: fixed;
+}

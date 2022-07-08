@@ -1,0 +1,140 @@
+   .mediaTab {
+       .nav-tabs {
+           flex-wrap: nowrap;
+
+           .nav-item {
+               margin: 0px 10px 0 0;
+
+               .nav-link {
+                   width: 126px;
+                   height: 126px;
+                   color: #007afe;
+                   border: 1px solid #b6d9ff;
+                   border-radius: .375rem;
+                   cursor: pointer;
+
+                   &:hover,
+                   &:focus {
+                       border: 1px solid #007afe;
+                   }
+
+                   @media(max-width:650px) {
+                       width: 116px;
+                       height: 116px;
+                   }
+
+                   .mediaTabLabl {
+                       font-size: 15px;
+                       font-weight: 400;
+                       color: #5a6169;
+                   }
+
+                   i {
+                       font-size: 40px;
+                   }
+               }
+
+               .nav-link.active {
+                   background: #007afe;
+                   color: #fff;
+
+                   .mediaTabLabl {
+                       color: #fff;
+                   }
+               }
+           }
+
+       }
+
+       .tab-pane {
+           margin-top: 15px;
+       }
+
+       .dragDropBlock {
+           border: 1px dashed #aaa;
+           min-height: 95px;
+           border-radius: 5px;
+           transition: all ease 0.2 0s;
+           padding: 10px;
+
+           &:hover {
+               border-color: #ccc;
+           }
+
+           .dragDropCell {
+            @media(max-width:480px) {
+               flex-direction: column !important;
+            }
+               label {
+                   font-size: 19px;
+                   margin: 10px 0 !important;
+                   @media(max-width:480px) {
+                    font-size: 15px;
+                    margin: 0 0 !important;
+                 }
+
+                   i {
+                       font-size: 30px;
+                       margin: 0 8px 0 0;
+                       opacity: 0.8;
+                       @media(max-width:480px) {
+                        font-size: 22px;
+                     }
+                   }
+               }
+
+               >span {
+                   margin: 10px 15px;
+                   font-size: 19px;
+                   font-weight: 400;
+                   color: #aaa;
+                   @media(max-width:650px) {
+                    font-size: 19px;
+                    margin: 5px 15px;
+                 }
+               }
+
+               .browseCell {
+                   border: 1px solid;
+                   font-weight: 500;
+                   margin: 10px 0;
+                   @media(max-width:650px) {
+                    font-size: 19px;
+                    margin: 5px 0;
+                 }
+                   &:hover,
+                   &:focus {
+                       text-decoration: none;
+                   }
+
+                   input {
+                       top: 0;
+                       left: 0;
+                       right: 0;
+                       bottom: 0;
+                       opacity: 0;
+                       height: auto;
+                       cursor: pointer;
+                   }
+               }
+           }
+       }
+
+       .orLabel {
+           margin: 0 15px;
+
+           @media(max-width:960px) {
+               margin: 15px 15px 10px;
+           }
+
+           span {
+               width: 36px;
+               height: 36px;
+               font-size: 14px;
+               font-weight: 400;
+               background-color: #eee;
+               text-transform: uppercase;
+           }
+       }
+
+   }

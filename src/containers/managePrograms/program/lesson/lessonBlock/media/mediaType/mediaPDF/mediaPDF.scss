@@ -1,0 +1,59 @@
+.dragDropReward {
+    border: 1px dashed #aaa;
+    height: 95px;
+    border-radius: 5px;
+    transition: all ease 0.2 0s;
+    padding:10px;
+    &:hover {
+        border-color: #ccc;
+    }
+
+    .dragDropCell {        
+    @media(max-width:650px){
+        flex-direction: column !important; 
+    }
+        label {
+            font-size: 19px;
+
+            i {
+                font-size: 30px;
+                margin: 0 8px 0 0;
+                opacity: 0.8;
+            }
+        }
+
+        >span {
+            margin: 0 15px;
+            font-size: 19px;
+            font-weight: 400;
+            color: #aaa;
+        }
+
+        .browseCell {
+            border: 1px solid;
+            font-weight: 500;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+            @media(max-width:650px){
+                width: 100%;
+            }
+
+            i {
+                font-size: 21px;
+                margin: 0 4px 0 0;
+            }
+
+            input {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+    }
+}

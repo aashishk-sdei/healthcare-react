@@ -1,0 +1,55 @@
+.browseInputCell,
+.browseInputCell input,
+.browseInputCell label {
+  height: 40px;
+}
+
+.browseInputCell label:after {
+  height: 38px;
+}
+
+.browseInputCell {
+  .custom-file {
+    margin-right: 10px;
+
+    .custom-file-label {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-right: 96px;
+    }
+  }
+
+  .browseInputFile {
+    width: 40px;
+    height: 40px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.deleteimgbtn {
+  position: relative;
+}
+.deleteimgbtn button {
+  background: #fff;
+  color: red;
+  position: absolute;
+  top: -7px;
+  padding: 0px !important;
+  right: -1px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  &:hover {
+    background-color: #fff;
+    color: red;
+  }
+  &:focus {
+    background-color: #fff;
+    color: red;
+  }
+}

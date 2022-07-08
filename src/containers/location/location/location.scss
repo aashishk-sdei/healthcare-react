@@ -1,0 +1,39 @@
+.locationinnerRw {
+    margin-bottom: 15px;
+}
+
+.locationRw {
+    margin-bottom: 20px;
+}
+.weekTimeCol {
+    margin-right: 12px;
+}
+
+.weekTimeCol i.material-icons {
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.customTimeRw {
+    .customTime {
+        width: 136px;
+        margin-right: 12px;
+        @media(max-width: 767px) {
+            width:100px;
+        }
+        .weekTimeCol {
+            margin-right: 0;
+            margin-bottom: 10px;
+            @media(max-width: 600px) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.locationInputBlc {
+    max-width: 280px;
+    width: 100%;
+}
